@@ -1,0 +1,18 @@
+# This is a raw output from ldapsearch. Note how ldapsarch splits the output into multiple lines
+# which can cause issues for those who use a screen reader.
+ldapsearch -Q -Y EXTERNAL -b "cn=schema,cn=config" -LLL "(olcObjectClasses=*)" olcObjectClasses
+...
+dn: cn={3}inetorgperson,cn=schema,cn=config
+olcObjectClasses: {0}( 2.16.840.1.113730.3.2.2 NAME 'inetOrgPerson' DESC 'RFC2
+ 798: Internet Organizational Person' SUP organizationalPerson STRUCTURAL MAY 
+ ( audio $ businessCategory $ carLicense $ departmentNumber $ displayName $ em
+ ployeeNumber $ employeeType $ givenName $ homePhone $ homePostalAddress $ ini
+ tials $ jpegPhoto $ labeledURI $ mail $ manager $ mobile $ o $ pager $ photo 
+ $ roomNumber $ secretary $ uid $ userCertificate $ x500uniqueIdentifier $ pre
+ ferredLanguage $ userSMIMECertificate $ userPKCS12 ) )
+...
+# Here's another one, but this time, the name "krbTicketPolicyAux" gets split
+# into two lines.
+olcObjectClasses: {10}( 2.16.840.1.113719.1.301.6.16.1 NAME 'krbTicketPolicyAu
+ x' SUP top AUXILIARY MAY ( krbTicketFlags $ krbMaxTicketLife $ krbMaxRenewabl
+ eAge ) )
