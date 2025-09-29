@@ -1,2 +1,2 @@
-# helper-scripts
-A collection of practical scripts to automate system administration tasks, including LDAP schema exploration, user management, and output formatting for improved readability.
+# Helper Scripts
+A versatile repository of helper scripts aimed at system administrators and developers for automating and simplifying routine tasks. Includes tools for LDAP schema inspection, user account management (LDAP, Kerberos), and utilities to transform complex command-line outputs into readable formats. While focused on directory services, the repository also supports general automation and accessibility improvements across various system operations.
