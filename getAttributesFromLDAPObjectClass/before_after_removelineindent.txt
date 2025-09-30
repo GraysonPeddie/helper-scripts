@@ -1,0 +1,33 @@
+# BEFORE:
+# In commit "Uploaded getAttributesFromLDAPObjectClass.py":
+root@communicore-east:~# /usr/local/bin/getAttributesFromLDAPObjectClass.py shadowAccount
+ObjectClass: shadowAccount
+Description: Additional a ttributes for shadow passwords
+Sup: top
+MAY attributes:
+  - userPassword
+  - shadowLastChange
+  - shadowMin
+  - shadowMax
+  - shadowWarning
+  - shadowInactive
+  - shadowExpire
+  - shadowFlag
+  - description
+
+# AFTER:
+# In commit "Added the code to remove the single-character indent for the LDAP schema.":
+root@communicore-east:~# /usr/local/bin/getAttributesFromLDAPObjectClass.py shadowAccount
+ObjectClass: shadowAccount
+Description: Additional attributes for shadow passwords
+Sup: top
+MAY attributes:
+  - userPassword
+  - shadowLastChange
+  - shadowMin
+  - shadowMax
+  - shadowWarning
+  - shadowInactive
+  - shadowExpire
+  - shadowFlag
+  - description
