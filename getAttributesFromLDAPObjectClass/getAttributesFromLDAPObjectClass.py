@@ -67,6 +67,20 @@ def main():
     # Split output into entries by blank line or "dn:" line
     entries = re.split(r'olcObjectClasses:\s', result)
 
+    # Let's get rid of the pesky, pesky line-wrapped indents once and for all.
+    entries2 = []
+    for entry in entries:
+        entry = entry.splitlines()
+        entry2 = []
+        for e in range(0,len(entry)):
+            if e > 0:
+                entry2.append(entry[e][1:])
+            else:
+                entry2.append(entry[e])
+        entries2.append(entry2)
+
+    entries = entries2
+
     if len(sys.argv) < 2:
         scriptname = os.path.basename(sys.argv[0])
         print(f"Usage: {scriptname} <objectclass_name>")
